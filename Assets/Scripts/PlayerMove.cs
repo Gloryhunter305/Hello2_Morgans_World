@@ -14,6 +14,8 @@ public class PlayerMove : MonoBehaviour
     public float MouseSensitivity = 3;
     public float WalkSpeed = 10;
 
+    [SerializeField] private bool playerInteracting = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,18 +26,25 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //If my mouse goes left/right my body moves left/right
-        float xRot = Input.GetAxis("Mouse X") * MouseSensitivity;
-        transform.Rotate(0,xRot,0);
-        
-        //If my mouse goes up/down my aim (but not body) go up/down
-        float mouseY = -Input.GetAxis("Mouse Y") * MouseSensitivity;
-        cameraPitch += mouseY;
-        cameraPitch = Mathf.Clamp(cameraPitch, -MaxLookAngle, MaxLookAngle);
+        if (!playerInteracting)
+        {
+            PlayerMovement();
+            CameraControl();
+        }
+        else
+        {
+            RB.linearVelocity = Vector3.zero; //Interaction bug fix
+        }
+    }
 
-        PlayerEyes.transform.localEulerAngles = new Vector3(cameraPitch, 0f, 0f);
+    public void SetPlayerInteracting(bool isInteracting)
+    {
+        playerInteracting = isInteracting;
+        Debug.Log("Player is interacting: " + playerInteracting);
+    }
 
-
+    void PlayerMovement()
+    {
         /*          Player Movement     */
         if (WalkSpeed > 0)
         {
@@ -54,5 +63,18 @@ public class PlayerMove : MonoBehaviour
 
             RB.linearVelocity = move; // Use correct property
         }
+    }
+    void CameraControl()
+    {
+        //If my mouse goes left/right my body moves left/right
+        float xRot = Input.GetAxis("Mouse X") * MouseSensitivity;
+        transform.Rotate(0, xRot, 0);
+
+        //If my mouse goes up/down my aim (but not body) go up/down
+        float mouseY = -Input.GetAxis("Mouse Y") * MouseSensitivity;
+        cameraPitch += mouseY;
+        cameraPitch = Mathf.Clamp(cameraPitch, -MaxLookAngle, MaxLookAngle);
+
+        PlayerEyes.transform.localEulerAngles = new Vector3(cameraPitch, 0f, 0f);
     }
 }
