@@ -36,6 +36,7 @@ public class PlayerInteract : MonoBehaviour
             else
             {
                 DisableCurrentInteractable();
+                Debug.Log("Not looking at interactable");
             }
         }
         else
