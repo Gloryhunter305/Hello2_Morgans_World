@@ -209,6 +209,114 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aaa9a230e8396a443a2babe79389a87e, type: 3}
   m_PrefabInstance: {fileID: 1626834034}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &83370641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 83370642}
+  - component: {fileID: 83370645}
+  - component: {fileID: 83370644}
+  - component: {fileID: 83370643}
+  m_Layer: 2
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &83370642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83370641}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0.04, z: -0.000226}
+  m_LocalScale: {x: 0.019840885, y: 0.01, z: 0.01900427}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1751836470}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &83370643
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83370641}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &83370644
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83370641}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 237d50bbf8c71c94f84fd3a1189b23dc, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &83370645
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83370641}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &110957124
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +713,7 @@ Transform:
   m_GameObject: {fileID: 204176127}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.7, y: 0.14, z: -15.92}
+  m_LocalPosition: {x: 2.764, y: 0.14, z: -15.302}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -626,9 +734,17 @@ MonoBehaviour:
   nameofItem: Cube
   Lines:
   - Text: This text is working
+    Day: 0
   - Text: Here's another one
+    Day: 0
   - Text: Did I cure boredom?
+    Day: 0
   - Text: Okay Bye.
+    Day: 0
+  - Text: This is Day 1
+    Day: 1
+  - Text: Hope you have a good day.
+    Day: 1
 --- !u!114 &204176133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1003,6 +1119,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8b5296650e95729468b4708ffb4fed34, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f8eaaf6be93fce248bcdf23a62567a0e, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b5296650e95729468b4708ffb4fed34, type: 3}
       propertyPath: m_Name
       value: Table
@@ -1291,8 +1411,8 @@ Light:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
   m_Range: 10
-  m_SpotAngle: 179
-  m_InnerSpotAngle: 170.80208
+  m_SpotAngle: 171.96317
+  m_InnerSpotAngle: 89.43838
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -1328,9 +1448,9 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
+  m_AreaSize: {x: 10, y: 10}
   m_BounceIntensity: 1
   m_ColorTemperature: 5000
   m_UseColorTemperature: 1
@@ -1352,7 +1472,7 @@ Transform:
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0.797, y: 2.194, z: -17.52}
+  m_LocalPosition: {x: 0.797, y: 2.194, z: -18.143}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1511,6 +1631,20 @@ MonoBehaviour:
   nameofItem: Homework...
   Lines:
   - Text: You might as well do some homework...
+    Day: 0
+  - Text: "You don\u2019t want to."
+    Day: 1
+  - Text: But you have nothing else to do..
+    Day: 1
+  - Text: "You\u2019ll do it later."
+    Day: 2
+  - Text: "You\u2019ll do it later.."
+    Day: 2
+  - Text: "You\u2019ll do it later. You\u2019ll do it later. You\u2019ll do it later.
+      You\u2019ll do it later. You\u2019ll do it later. You\u2019ll do it later.
+      You\u2019ll do it later. You\u2019ll do it later. You\u2019ll do it later.
+      You\u2019ll do it later. You\u2019ll do it later. You\u2019ll do it later."
+    Day: 2
 --- !u!114 &519990632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1549,7 +1683,15 @@ MonoBehaviour:
   nameofItem: Trash Can
   Lines:
   - Text: A collection of assignments and ideas.
+    Day: 0
   - Text: All that went nowhere.
+    Day: 0
+  - Text: You got a letter saying you missed class.
+    Day: 1
+  - Text: 'But you threw it out before your mom could see '
+    Day: 1
+  - Text: "It\u2019s full. You\u2019ll throw it out later. "
+    Day: 2
 --- !u!114 &545696080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2093,10 +2235,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: 71489379139f200429a7c24fa1926af1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f8eaaf6be93fce248bcdf23a62567a0e, type: 2}
     - target: {fileID: 919132149155446097, guid: 71489379139f200429a7c24fa1926af1, type: 3}
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 1972221354366279215, guid: 71489379139f200429a7c24fa1926af1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4dc01bb892e0ca4e8604b25abe65e10, type: 2}
+    - target: {fileID: 7202271454713460447, guid: 71489379139f200429a7c24fa1926af1, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4dc01bb892e0ca4e8604b25abe65e10, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2738,79 +2892,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 957003540}
   m_CullTransparentMesh: 1
---- !u!1001 &960970554
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1415383296}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 160
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 159.99998
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 159.99998
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.257909
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.9443178
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.7880688
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 4c57bfc5a0e2d734797955545ba89ba6, type: 2}
-    - target: {fileID: 919132149155446097, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-      propertyPath: m_Name
-      value: Basket
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
 --- !u!1 &993631730
 GameObject:
   m_ObjectHideFlags: 0
@@ -3266,6 +3347,51 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1514525860}
   m_SourcePrefab: {fileID: 100100000, guid: 078f0c0e42b1589489904141dcb58438, type: 3}
+--- !u!1 &1185748426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1185748427}
+  - component: {fileID: 1185748428}
+  m_Layer: 0
+  m_Name: DayMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1185748427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185748426}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.79044116, y: 1.2063961, z: -17.492092}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1185748428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185748426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8d88a243706714ab418ed63ba3c34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDay: 0
 --- !u!1 &1238684691
 GameObject:
   m_ObjectHideFlags: 0
@@ -3345,6 +3471,88 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1347375815
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1415383296}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3786457
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3786457
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3786457
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.659909
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.080318
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.3720703
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c57bfc5a0e2d734797955545ba89ba6, type: 2}
+    - target: {fileID: 919132149155446097, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: m_Name
+      value: Curtains
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4dc01bb892e0ca4e8604b25abe65e10, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+--- !u!4 &1347375816 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cec7deabbff9a7b429c74b405a21b46a, type: 3}
+  m_PrefabInstance: {fileID: 1347375815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1415383295
 GameObject:
   m_ObjectHideFlags: 0
@@ -3374,7 +3582,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1555158381}
   - {fileID: 1705890315}
   - {fileID: 1751836470}
   - {fileID: 78748328}
@@ -3386,6 +3593,7 @@ Transform:
   - {fileID: 677870233}
   - {fileID: 2049382144}
   - {fileID: 519990627}
+  - {fileID: 1347375816}
   m_Father: {fileID: 1699735669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1457785160
@@ -3624,7 +3832,15 @@ MonoBehaviour:
   nameofItem: Plant
   Lines:
   - Text: Your parents bought this for you.
+    Day: 0
   - Text: It's reached this state because of months of neglect.
+    Day: 0
+  - Text: You should probably throw it out.
+    Day: 1
+  - Text: "It\u2019s dead. "
+    Day: 2
+  - Text: "You\u2019ll get a new one later."
+    Day: 2
 --- !u!114 &1514525861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3666,11 +3882,6 @@ CapsuleCollider:
   m_Height: 0.02330391
   m_Direction: 1
   m_Center: {x: -0.0014034327, y: 0.0006529403, z: 0.015487432}
---- !u!4 &1555158381 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: dface59f39f3886469c65d31829ce9b9, type: 3}
-  m_PrefabInstance: {fileID: 960970554}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1619508464
 GameObject:
   m_ObjectHideFlags: 0
@@ -3839,10 +4050,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4683669308469848369, guid: aaa9a230e8396a443a2babe79389a87e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 48425181736bed540a029c29f0d0655e, type: 2}
+    - target: {fileID: -2859109400176981367, guid: aaa9a230e8396a443a2babe79389a87e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4dc01bb892e0ca4e8604b25abe65e10, type: 2}
+    - target: {fileID: -1461304994638716399, guid: aaa9a230e8396a443a2babe79389a87e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 48425181736bed540a029c29f0d0655e, type: 2}
     - target: {fileID: 919132149155446097, guid: aaa9a230e8396a443a2babe79389a87e, type: 3}
       propertyPath: m_Name
       value: Ceiling Fan
       objectReference: {fileID: 0}
+    - target: {fileID: 5100068591777345685, guid: aaa9a230e8396a443a2babe79389a87e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4dc01bb892e0ca4e8604b25abe65e10, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3922,7 +4149,17 @@ MonoBehaviour:
   nameofItem: Plushie on Bed
   Lines:
   - Text: A childhood plush.
+    Day: 0
   - Text: "It\u2019s been with you through thick and thin."
+    Day: 0
+  - Text: "The only thing you\u2019ve seriously made an effort to take care of. "
+    Day: 1
+  - Text: When an arm started falling off, you actually sewed it back on.
+    Day: 1
+  - Text: 'If only you could put the same care towards yourself. '
+    Day: 1
+  - Text: 'A friend. '
+    Day: 2
 --- !u!114 &1705890322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4071,7 +4308,7 @@ MonoBehaviour:
   PlayerEyes: {fileID: 330585545}
   RB: {fileID: 1731125845}
   MouseSensitivity: 3
-  WalkSpeed: 1
+  WalkSpeed: 1.25
   playerInteracting: 0
 --- !u!54 &1731125845
 Rigidbody:
@@ -4133,6 +4370,11 @@ MonoBehaviour:
   nameofItem: Calendar
   Lines:
   - Text: Monday.
+    Day: 0
+  - Text: Wednesday.
+    Day: 1
+  - Text: Friday.
+    Day: 2
 --- !u!114 &1751836474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4344,6 +4586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trash Can
       objectReference: {fileID: 0}
+    - target: {fileID: 7202271454713460447, guid: 78b14f97477cf204094422e24a40c430, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4dc01bb892e0ca4e8604b25abe65e10, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4824,7 +5070,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: be59ac00acf63d34f8f578dc90158e6c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 83370642}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: be59ac00acf63d34f8f578dc90158e6c, type: 3}
       insertIndex: -1
@@ -5523,6 +5772,11 @@ MonoBehaviour:
   nameofItem: Door
   Lines:
   - Text: You don't want to leave.
+    Day: 0
+  - Text: "You don\u2019t want to leave.."
+    Day: 1
+  - Text: "You don\u2019t want to leave..."
+    Day: 2
 --- !u!114 &2049382147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5735,6 +5989,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ee1f86fa8bdc65d4791f1c88544e0820, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d4dc01bb892e0ca4e8604b25abe65e10, type: 2}
     - target: {fileID: 919132149155446097, guid: ee1f86fa8bdc65d4791f1c88544e0820, type: 3}
       propertyPath: m_Name
       value: Lamp
@@ -5756,3 +6014,4 @@ SceneRoots:
   - {fileID: 1047546817}
   - {fileID: 1238684694}
   - {fileID: 1699735669}
+  - {fileID: 1185748427}

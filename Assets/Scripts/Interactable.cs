@@ -79,4 +79,5 @@ public class Interactable : MonoBehaviour
 public class DialogueLine
 {
     public string Text;
+    public string Day;  //The day this dialogue line is associated with
 }

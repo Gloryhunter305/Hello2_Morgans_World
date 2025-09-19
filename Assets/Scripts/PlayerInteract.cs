@@ -63,13 +63,33 @@ public class PlayerInteract : MonoBehaviour
                 }
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.H) && !dialogueOpen)
+        {
+            // For testing purposes, advance the day when space is pressed
+            DayMaster dayMaster = FindFirstObjectByType<DayMaster>();
+            if (dayMaster != null)
+            {
+                dayMaster.AdvanceDay();
+            }
+        }
     }
 
     void StartDialogue(List<DialogueLine> lines)
     {
         if (lines == null || lines.Count == 0) return;
 
-        currentLines = lines;
+        //currentLines = lines;
+
+        //Grab only the lines for the current day
+        DayMaster dayMaster = FindFirstObjectByType<DayMaster>();
+        if (dayMaster != null)
+        {
+            string currentDayStr = dayMaster.currentDay.ToString();
+            currentLines = lines.FindAll(line => line.Day == currentDayStr);
+        }
+        Debug.Log("Found " + currentLines.Count);
+
         index = 0;
         dialogueOpen = true;
         FreezePlayer(true);
