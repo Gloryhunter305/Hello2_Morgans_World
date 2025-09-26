@@ -60,33 +60,47 @@ public class PlayerInteract : MonoBehaviour
                 {
                     // Start the dialogue using the interactable's Lines
                     StartDialogue(currentInteractable.Lines);
+
+                    // If this interactable should change the day immediately on interaction, do it now
+                    if (currentInteractable.advanceDayOnInteract && !currentInteractable.advanceAfterDialogue)
+                        currentInteractable.TriggerDayChange();
                 }
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.H) && !dialogueOpen)
-        {
-            // For testing purposes, advance the day when space is pressed
-            DayMaster dayMaster = FindFirstObjectByType<DayMaster>();
-            if (dayMaster != null)
-            {
-                dayMaster.AdvanceDay();
-            }
-        }
+        // if (Input.GetKeyDown(KeyCode.H) && !dialogueOpen)
+        // {
+        //     // For testing purposes, advance the day when space is pressed
+        //     DayMaster dayMaster = FindFirstObjectByType<DayMaster>();
+        //     if (dayMaster != null)
+        //     {
+        //         dayMaster.AdvanceDay();
+        //     }
+        // }
     }
 
     void StartDialogue(List<DialogueLine> lines)
     {
         if (lines == null || lines.Count == 0) return;
 
-        //currentLines = lines;
-
         //Grab only the lines for the current day
         DayMaster dayMaster = FindFirstObjectByType<DayMaster>();
         if (dayMaster != null)
         {
             string currentDayStr = dayMaster.currentDay.ToString();
-            currentLines = lines.FindAll(line => line.Day == currentDayStr);
+            // include lines with empty Day as "always available"
+            currentLines = lines.FindAll(line => string.IsNullOrEmpty(line.Day) || line.Day == currentDayStr);
+        }
+        else
+        {
+            // no DayMaster found -> use all lines
+            currentLines = new List<DialogueLine>(lines);
+        }
+
+        if (currentLines == null || currentLines.Count == 0)
+        {
+            Debug.Log("No dialogue lines for current day.");
+            return;
         }
         Debug.Log("Found " + currentLines.Count);
 
@@ -132,6 +146,20 @@ public class PlayerInteract : MonoBehaviour
             dialogueBox.SetActive(false);
 
         dialogueOpen = false;
+
+        // If this interactable should change the day after dialogue finishes, trigger it
+        if (currentInteractable != null && currentInteractable.advanceDayOnInteract && currentInteractable.advanceAfterDialogue)
+            currentInteractable.TriggerDayChange();
+
+        // If this specific interactable ("Cube") was used on Day 6, invoke its finalEvent
+        DayMaster dm = FindFirstObjectByType<DayMaster>();
+        if (currentInteractable != null && currentInteractable.nameofItem != null
+            && currentInteractable.nameofItem.Equals("Cube", System.StringComparison.OrdinalIgnoreCase)
+            && dm != null && dm.currentDay == 6)
+        {
+            Application.Quit(); // for now, just quit the application
+        }
+
         currentLines = null;
         index = 0;
         typingCoroutine = null;

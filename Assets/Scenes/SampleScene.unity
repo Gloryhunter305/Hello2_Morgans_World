@@ -579,7 +579,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0f184d2b4bcad254f83086c2f3b44dc0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -625,7 +625,7 @@ GameObject:
   - component: {fileID: 204176132}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Interactable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -737,7 +737,7 @@ MonoBehaviour:
     Day: 0
   - Text: Here's another one
     Day: 0
-  - Text: Did I cure boredom?
+  - Text: Did I cure your boredom?
     Day: 0
   - Text: Okay Bye.
     Day: 0
@@ -745,6 +745,41 @@ MonoBehaviour:
     Day: 1
   - Text: Hope you have a good day.
     Day: 1
+  - Text: Day 2
+    Day: 2
+  - Text: oh hey, you're still checking on me?
+    Day: 2
+  - Text: I'm doing good, thank you.
+    Day: 2
+  - Text: Are you okay?
+    Day: 3
+  - Text: You don't look well.
+    Day: 3
+  - Text: How about I break you out of here?
+    Day: 4
+  - Text: I mean you already found me.
+    Day: 4
+  - Text: Give me till Day 6
+    Day: 4
+  - Text: Day 5.
+    Day: 5
+  - Text: Just one more day.
+    Day: 5
+  - Text: You got this.
+    Day: 5
+  - Text: Are you ready?
+    Day: 6
+  - Text: Well of course you are.
+    Day: 6
+  - Text: You were trapped here.
+    Day: 6
+  - Text: Alrighty then.
+    Day: 6
+  advanceDayOnInteract: 0
+  advanceAfterDialogue: 0
+  advanceBy: 1
+  setDayToSpecific: 0
+  setDayIndex: 0
 --- !u!114 &204176133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,7 +876,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0f184d2b4bcad254f83086c2f3b44dc0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -954,7 +989,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0f184d2b4bcad254f83086c2f3b44dc0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1122,7 +1157,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 8b5296650e95729468b4708ffb4fed34, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: f8eaaf6be93fce248bcdf23a62567a0e, type: 2}
+      objectReference: {fileID: 2100000, guid: d4dc01bb892e0ca4e8604b25abe65e10, type: 2}
     - target: {fileID: 919132149155446097, guid: 8b5296650e95729468b4708ffb4fed34, type: 3}
       propertyPath: m_Name
       value: Table
@@ -1636,15 +1671,31 @@ MonoBehaviour:
     Day: 1
   - Text: But you have nothing else to do..
     Day: 1
-  - Text: "You\u2019ll do it later."
+  - Text: "Maybe if you ignore it long enough, it\u2019ll do itself. "
     Day: 2
-  - Text: "You\u2019ll do it later.."
+  - Text: "But it won\u2019t."
     Day: 2
-  - Text: "You\u2019ll do it later. You\u2019ll do it later. You\u2019ll do it later.
-      You\u2019ll do it later. You\u2019ll do it later. You\u2019ll do it later.
-      You\u2019ll do it later. You\u2019ll do it later. You\u2019ll do it later.
-      You\u2019ll do it later. You\u2019ll do it later. You\u2019ll do it later."
-    Day: 2
+  - Text: You'll do it later.
+    Day: 3
+  - Text: You'll do it later..
+    Day: 4
+  - Text: Do it later...
+    Day: 5
+  - Text: Do it...
+    Day: 5
+  - Text: Do...
+    Day: 5
+  - Text: It...
+    Day: 5
+  - Text: please..
+    Day: 5
+  - Text: Can I truly escape?
+    Day: 6
+  advanceDayOnInteract: 1
+  advanceAfterDialogue: 1
+  advanceBy: 1
+  setDayToSpecific: 0
+  setDayIndex: 0
 --- !u!114 &519990632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1692,6 +1743,17 @@ MonoBehaviour:
     Day: 1
   - Text: "It\u2019s full. You\u2019ll throw it out later. "
     Day: 2
+  - Text: "It\u2019s full. You\u2019ll throw it out later. "
+    Day: 3
+  - Text: "It\u2019s full. You\u2019ll throw it out later.."
+    Day: 4
+  - Text: It's full...
+    Day: 5
+  advanceDayOnInteract: 0
+  advanceAfterDialogue: 0
+  advanceBy: 1
+  setDayToSpecific: 0
+  setDayIndex: 0
 --- !u!114 &545696080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2027,7 +2089,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0f184d2b4bcad254f83086c2f3b44dc0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2165,6 +2227,135 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582965361}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &591680646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 591680648}
+  - component: {fileID: 591680647}
+  m_Layer: 0
+  m_Name: Ambience
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &591680647
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591680646}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: c64dea59ec1a0924d9a74db4fd66277b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &591680648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591680646}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.37, y: 1.406, z: -17.143856}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &677870233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee1f86fa8bdc65d4791f1c88544e0820, type: 3}
@@ -2461,7 +2652,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0f184d2b4bcad254f83086c2f3b44dc0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2618,7 +2809,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0f184d2b4bcad254f83086c2f3b44dc0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2970,7 +3161,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0f184d2b4bcad254f83086c2f3b44dc0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3841,6 +4032,23 @@ MonoBehaviour:
     Day: 2
   - Text: "You\u2019ll get a new one later."
     Day: 2
+  - Text: Brown leaves everywhere.
+    Day: 3
+  - Text: You glance at it and feel the weight of neglect.
+    Day: 3
+  - Text: "It\u2019s stiff and lifeless now."
+    Day: 4
+  - Text: "Even water wouldn\u2019t fix this."
+    Day: 4
+  - Text: Nothing grows here anymore.
+    Day: 5
+  - Text: "Not the plant\u2026 not you."
+    Day: 5
+  advanceDayOnInteract: 0
+  advanceAfterDialogue: 0
+  advanceBy: 1
+  setDayToSpecific: 0
+  setDayIndex: 0
 --- !u!114 &1514525861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3960,7 +4168,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0f184d2b4bcad254f83086c2f3b44dc0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4160,6 +4368,25 @@ MonoBehaviour:
     Day: 1
   - Text: 'A friend. '
     Day: 2
+  - Text: Always have been a friend.
+    Day: 3
+  - Text: You feel heavy and small at the same time
+    Day: 4
+  - Text: Does it also feel the same?
+    Day: 4
+  - Text: It doesn't speak.
+    Day: 5
+  - Text: Yet it hears everything.
+    Day: 5
+  - Text: It's like your always watching me.
+    Day: 6
+  - Text: Even beyond these walls.
+    Day: 6
+  advanceDayOnInteract: 0
+  advanceAfterDialogue: 0
+  advanceBy: 1
+  setDayToSpecific: 0
+  setDayIndex: 0
 --- !u!114 &1705890322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4193,6 +4420,7 @@ GameObject:
   - component: {fileID: 1731125840}
   - component: {fileID: 1731125844}
   - component: {fileID: 1731125846}
+  - component: {fileID: 1731125847}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4309,6 +4537,7 @@ MonoBehaviour:
   RB: {fileID: 1731125845}
   MouseSensitivity: 3
   WalkSpeed: 1.25
+  Footsteps: {fileID: 1731125847}
   playerInteracting: 0
 --- !u!54 &1731125845
 Rigidbody:
@@ -4350,6 +4579,103 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactRange: 0.75
+--- !u!82 &1731125847
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731125839}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: b3b8c8f1f74ce4b4b8fe677a29d1e61e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1751836470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: be59ac00acf63d34f8f578dc90158e6c, type: 3}
@@ -4375,6 +4701,21 @@ MonoBehaviour:
     Day: 1
   - Text: Friday.
     Day: 2
+  - Text: Monday.
+    Day: 3
+  - Text: Again.
+    Day: 3
+  - Text: What day is it now...
+    Day: 4
+  - Text: Forgot to keep track.
+    Day: 4
+  - Text: Do I even need to know...?
+    Day: 5
+  advanceDayOnInteract: 0
+  advanceAfterDialogue: 0
+  advanceBy: 1
+  setDayToSpecific: 0
+  setDayIndex: 0
 --- !u!114 &1751836474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4589,7 +4930,7 @@ PrefabInstance:
     - target: {fileID: 7202271454713460447, guid: 78b14f97477cf204094422e24a40c430, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d4dc01bb892e0ca4e8604b25abe65e10, type: 2}
+      objectReference: {fileID: 2100000, guid: 48425181736bed540a029c29f0d0655e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4682,7 +5023,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0f184d2b4bcad254f83086c2f3b44dc0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4942,7 +5283,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0f184d2b4bcad254f83086c2f3b44dc0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5777,6 +6118,29 @@ MonoBehaviour:
     Day: 1
   - Text: "You don\u2019t want to leave..."
     Day: 2
+  - Text: "Don\u2019t want to leave...."
+    Day: 3
+  - Text: Don't want to go.
+    Day: 4
+  - Text: The door is still there.
+    Day: 5
+  - Text: Watching. Waiting.
+    Day: 5
+  - Text: I'm not ready.
+    Day: 5
+  - Text: ..
+    Day: 6
+  - Text: ...
+    Day: 6
+  - Text: Let me rest in peace,
+    Day: 6
+  - Text: Mom..
+    Day: 6
+  advanceDayOnInteract: 0
+  advanceAfterDialogue: 0
+  advanceBy: 1
+  setDayToSpecific: 0
+  setDayIndex: 0
 --- !u!114 &2049382147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5873,7 +6237,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0f184d2b4bcad254f83086c2f3b44dc0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6015,3 +6379,4 @@ SceneRoots:
   - {fileID: 1238684694}
   - {fileID: 1699735669}
   - {fileID: 1185748427}
+  - {fileID: 591680648}

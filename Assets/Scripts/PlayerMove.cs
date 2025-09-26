@@ -14,6 +14,9 @@ public class PlayerMove : MonoBehaviour
     public float MouseSensitivity = 3;
     public float WalkSpeed = 10;
 
+    [Header("Sounds")]
+    public AudioSource Footsteps;
+
     [SerializeField] private bool playerInteracting = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -61,9 +64,27 @@ public class PlayerMove : MonoBehaviour
 
             move = move.normalized * WalkSpeed;
 
-            RB.linearVelocity = move; // Use correct property
+            RB.linearVelocity = move;
+
+            // Footstep audio logic
+            if (move.magnitude > 0)
+            {
+                if (!Footsteps.isPlaying)
+                    Footsteps.Play();
+            }
+            else
+            {
+                if (Footsteps.isPlaying)
+                    Footsteps.Stop();
+            }
+        }
+        else
+        {
+            if (Footsteps.isPlaying)
+                Footsteps.Stop();
         }
     }
+
     void CameraControl()
     {
         //If my mouse goes left/right my body moves left/right
