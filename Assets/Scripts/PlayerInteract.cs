@@ -68,15 +68,15 @@ public class PlayerInteract : MonoBehaviour
             }
         }
 
-        // if (Input.GetKeyDown(KeyCode.H) && !dialogueOpen)
-        // {
-        //     // For testing purposes, advance the day when space is pressed
-        //     DayMaster dayMaster = FindFirstObjectByType<DayMaster>();
-        //     if (dayMaster != null)
-        //     {
-        //         dayMaster.AdvanceDay();
-        //     }
-        // }
+        if (Input.GetKeyDown(KeyCode.H) && !dialogueOpen)
+        {
+            // For testing purposes, advance the day when space is pressed
+            DayMaster dayMaster = FindFirstObjectByType<DayMaster>();
+            if (dayMaster != null)
+            {
+                dayMaster.AdvanceDay();
+            }
+        }
     }
 
     void StartDialogue(List<DialogueLine> lines)
@@ -154,7 +154,7 @@ public class PlayerInteract : MonoBehaviour
         // If this specific interactable ("Cube") was used on Day 6, invoke its finalEvent
         DayMaster dm = FindFirstObjectByType<DayMaster>();
         if (currentInteractable != null && currentInteractable.nameofItem != null
-            && currentInteractable.nameofItem.Equals("Cube", System.StringComparison.OrdinalIgnoreCase)
+            && currentInteractable.nameofItem.Equals("Bear", System.StringComparison.OrdinalIgnoreCase)
             && dm != null && dm.currentDay == 6)
         {
             Application.Quit(); // for now, just quit the application
